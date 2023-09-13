@@ -104,31 +104,5 @@
             <button type="submit">Submit</button>
         </form>
     </div>
-
-	<script>
-		document.getElementById("registration-form").addEventListener("submit", function(event) {
-		var lastname = document.getElementById("last_name");
-		var firstname = document.getElementById("first_name");
-		var middlename = document.getElementById("middle_name");
-		var birthdate = document.getElementById("birthdate");
-		var department = document.getElementById("department");
-		var office = document.getElementById("office");
-		console.log("Last Name:" + lastname.value);
-		console.log("First Name:" + firstname.value);
-		console.log("Middle Name:" + middlename.value);
-		console.log("Birthdate:" + birthdate.value);
-		console.log("Department:" + department.value);
-		console.log("Office:" + office.value);
-		event.preventDefault(); // Prevent the form from actually submitting
-		// Access and display form data
-		var form = event.target;
-		var formData = new FormData(form);
-		// Iterate through form data and log it (for debugging)
-		for (var pair of formData.entries()) {
-		console.log(pair[0] + ": " + pair[1]);
-		}
-		});
-	</script>
-
 </body>
 </html>
